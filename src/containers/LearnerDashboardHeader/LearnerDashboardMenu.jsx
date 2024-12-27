@@ -17,11 +17,6 @@ const getLearnerHeaderMenu = (
       content: formatMessage(messages.course),
       isActive: true,
     },
-    ...(getConfig().ENABLE_PROGRAMS ? [{
-      type: 'item',
-      href: `${urls.programsUrl()}`,
-      content: formatMessage(messages.program),
-    }] : []),
     {
       type: 'item',
       href: `${urls.baseAppUrl(courseSearchUrl)}`,
@@ -32,11 +27,6 @@ const getLearnerHeaderMenu = (
     },
   ],
   secondaryMenu: [
-    ...(getConfig().SUPPORT_URL ? [{
-      type: 'item',
-      href: `${getConfig().SUPPORT_URL}`,
-      content: formatMessage(messages.help),
-    }] : []),
   ],
   userMenu: [
     {
